@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower Of Hanoi</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Tower of Hanoi</h1>
+            <p class="subtitle">Move all disks from Tower 1 to Tower 3</p>
+        </div>
+
+        <div class="menu">
+            <div class="disk-selector">
+                <label for="diskCount">Number of Disks: 5</label>
+            </div>
+            <button id="resetBtn">Reset Game</button>
+        </div>
+
+        <div class="game-stats">
+            <div class="stat">
+                <span>Moves</span>
+                <span id="moveCount">0</span>
+            </div>
+            <div class="stat">
+                <span>Minimum Moves</span>
+                <span id="minMoves">7</span>
+            </div>
+            <div class="stat">
+                <span>Time</span>
+                <span id="timer">00:00</span>
+            </div>
+        </div>
+
+        <div class="gameArea">
+            <div id="tower1" class="tower" data-tower="0">
+                <div class="tower-container">
+                    <div class="pole">
+                    </div>
+                    <div class="disk-stack">
+                    </div>
+                    <div class="base"></div>
+                </div>
+                <div class="towerName">Tower 1</div>
+            </div>
+            
+            <div id="tower2" class="tower" data-tower="1">
+                <div class="tower-container">
+                    <div class="pole"></div>
+                    <div class="disk-stack">
+                    </div>
+                    <div class="base"></div>
+                </div>
+                <div class="towerName">Tower 2</div>
+            </div>
+            
+            <div id="tower3" class="tower" data-tower="2">
+                <div class="tower-container">
+                    <div class="pole"></div>
+                    <div class="disk-stack"></div>
+                    <div class="base"></div>
+                </div>
+                <div class="towerName">Tower 3</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
